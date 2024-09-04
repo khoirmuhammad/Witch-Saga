@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Witch Saga";
+}
+
+<h1>Witch Saga</h1>
+
+<hr />
+
+<h3>Number of Killed</h3>
+
+<form method="post" asp-action="CalculateNumber">
+    <div>
+        <label>Input Year:</label>
+        <input type="number" name="year" required />
+    </div>
+
+    <button type="submit">Calculate Number</button>
+</form>
+
+<p>@ViewBag.NumberResult</p>
+
+<hr />
+
+<h3>Death Average</h3>
+
+<form method="post" asp-action="CalculateAverage">
+    <div>
+        <label>Age of Death for Person A:</label>
+        <input type="number" name="age1" required />
+    </div>
+    <div>
+        <label>Year of Death for Person A:</label>
+        <input type="number" name="yearOfDeath1" required />
+    </div>
+    <div>
+        <label>Age of Death for Person B:</label>
+        <input type="number" name="age2" required />
+    </div>
+    <div>
+        <label>Year of Death for Person B:</label>
+        <input type="number" name="yearOfDeath2" required />
+    </div>
+    <button type="submit">Calculate Average</button>
+</form>
+
+<p>@ViewBag.AverageResult</p>
